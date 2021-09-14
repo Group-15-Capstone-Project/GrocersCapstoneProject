@@ -2,5 +2,7 @@
 
 Group Members:
 Jonah Valdez
-Johnathon Ramirezy
 Kairavi Rana
+Johnathon Ramirez
+Lipi Soni
+
