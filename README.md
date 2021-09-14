@@ -2,4 +2,4 @@
 
 Group Members:
 Jonah Valdez
-Johnathon Ramirezy
+Johnathon Ramirez
