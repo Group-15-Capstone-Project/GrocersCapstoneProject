@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserDashboardComponent,
     EmployeeDashboardComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

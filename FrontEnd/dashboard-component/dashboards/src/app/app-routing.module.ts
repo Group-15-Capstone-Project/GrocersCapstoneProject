@@ -1,3 +1,4 @@
+import { NotfoundComponent } from './notfound/notfound.component';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
@@ -9,7 +10,8 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path:"admindashboard",component:AdminDashboardComponent},
   {path:"userdashboard",component:UserDashboardComponent},
-  {path:"employeedashboard",component:EmployeeDashboardComponent}
+  {path:"employeedashboard",component:EmployeeDashboardComponent},
+  {path:"**",component:NotfoundComponent}
 ];
 
 @NgModule({
