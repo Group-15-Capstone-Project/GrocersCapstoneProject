@@ -15,11 +15,23 @@ export class LoginComponent implements OnInit {
   })
   msg:string=""
 
-  constructor(public Loginser: LoginService, 
+  constructor(public LoginSer: LoginService, 
               public router: Router) { }
 
   ngOnInit(): void {
   }
-
-
+ 
+  checkUser(){
+     let login = this.LoginRef.value;
+     this.LoginSer.checkLogin(login).
+     subscribe(result=>{
+       if(result=="Success"){
+         this.router.navigate(["home",login.email]);
+       }else {
+           this.msg = result;
+       }
+  },
+    error=>console.log(error));
+  this.LoginRef.reset();
+}
 }
