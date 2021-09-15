@@ -4,24 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrator Page</title>
+    <title>User Page</title>
 </head>
 <body>
-    <h2>Welcome Administrator</h2>
-
-        <!-- UI for loggin -->
-        <div>
-            <form>
-                <label for="adminName">Administrator Name</label>
-                <input type="text" placeholder="Enter User Name" name="adminName" required><br>
-    
-                <label for="adminPass">Password</label>
-                <input type="text" placeholder="Enter Password" name="adminPass" required><br>
-                
-                <button type="submit">Login</button>
-                
-            </form>
-        </div>
-        <!-- UI for loggin -->
+    <div class="container">
+        <h2>Admin Login Page</h2>
+        <form [formGroup]="loginRef" (ngSubmit)="checkUser()" class="form-group">
+            <label>Admin User</label>
+            <input type="text" formControlName="user" class="form-control"/><br/>
+            <label>Password</label>
+            <input type="password" formControlName="pass" class="form-control"/><br/>
+            <input type="submit" value="Sign In!" class="btn btn-success"/>
+            <input type="reset" value="reset" class="btn btn-info"/>
+        </form>
+        <br/>
+        <span style="color:red;">{{msg}}</span>
+    </div>
 </body>
 </html>
