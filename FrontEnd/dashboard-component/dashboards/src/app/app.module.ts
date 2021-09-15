@@ -9,6 +9,8 @@ import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashbo
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { UserPanelComponent } from './user-panel/user-panel.component';
+import { EmployeePanelComponent } from './employee-panel/employee-panel.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
     EmployeeDashboardComponent,
     AdminDashboardComponent,
     NotfoundComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    UserPanelComponent,
+    EmployeePanelComponent
   ],
   imports: [
     BrowserModule,
