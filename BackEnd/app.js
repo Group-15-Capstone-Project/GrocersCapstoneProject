@@ -5,7 +5,9 @@ let mongoose = require('mongoose');
 let cors = require("cors");
 let routerEmployee = require("./router/employee.router")
 //const bodyParser = require("body-parser");
-
+let app = express();
+app.use(cors());
+app.use(bodyParser.json());
 
 //setting up the database
 const mongoDB = "mongodb+srv://suppeople111:TCSISCOOL123@cluster0.kg8o6.mongodb.net/Capstone?retryWrites=true&w=majority"
@@ -13,6 +15,7 @@ mongoose.connect(mongoDB, {useNewUrlParser:true,useUnifiedTopology:true}).then((
     console.log("Connected");
 }).catch(err => console.log(err))
 
+<<<<<<< HEAD
 //middleware
 let app = express();
 app.use(cors());
@@ -21,3 +24,9 @@ app.use(bodyParser.json());
 //request router file
 app.use("/api/Employee",routerEmployee)
 
+=======
+
+
+ let adminModel = mongoose.model("Admin", admin)
+app.get()
+>>>>>>> a4ff9e339d722fae769f3baba18f5af61eeccc49

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Products</title>
+</head>
+<body>
+
+    <div class = "container">
+    <div class="row">
+        <div class="col-2"><label>Item:</label></div>
+        <div class="col-3"><input type="text" name="product" id="title"/></div>
+    </div>
+    <div class="row">
+        <div class="col-2"><label>Price:</label></div>
+        <div class="col-3"><input type="text" name="price" id="article"/></div>
+    </div>
+    <div class="row">
+        <div class="col-2"><label>Quantity:</label></div>
+        <div class="col-3"><input type="text" name="quantity" id="article"/></div>
+    </div>
+    <div class="row">
+        <div class="col-2"><label>Image:</label></div>
+        <div class="col-3">   <input type = "url">  </input>
+    </div>
+    <div class="col-2"><input type="button" value="Add" class="btn btn-group" onclick = "addProduct()"/></div>
+    </div>
+
+
+
+<!---<table border="1">
+        <tr>
+            <th> Product name</th>
+            <th> Price </th>
+            <th> </th>
+        </tr>
+    </table> -->
+    <div class = "card">
+        <div class="card-body">
+            <p id = "name"></p>
+            <p id = "price"></p>
+            <p id = "quantity"></p>
+            <img class="picture" src="">
+        </div>
+    </div>
+    <div class = "card">
+        <img class="picture" src="">
+        <div class="card-body">
+            <p id = "name"></p>
+            <p id = "price"></p>
+            <p id = "quantity"></p>
+            <img class="picture" src="">
+        </div>
+    </div>
+
+
+</body>
+</html>
