@@ -15,18 +15,16 @@ mongoose.connect(mongoDB, {useNewUrlParser:true,useUnifiedTopology:true}).then((
     console.log("Connected");
 }).catch(err => console.log(err))
 
-<<<<<<< HEAD
 //middleware
-let app = express();
-app.use(cors());
-app.use(bodyParser.json());
+// let app = express();
+// app.use(cors());
+// app.use(bodyParser.json());
 
 //request router file
-app.use("/api/Employee",routerEmployee)
-
-=======
+app.use("/api/employee",routerEmployee)
 
 
- let adminModel = mongoose.model("Admin", admin)
-app.get()
->>>>>>> a4ff9e339d722fae769f3baba18f5af61eeccc49
+
+//  let adminModel = mongoose.model("Admin", admin)
+// app.get()
+app.listen(9090,()=>console.log("Server running on port number 9090"))
