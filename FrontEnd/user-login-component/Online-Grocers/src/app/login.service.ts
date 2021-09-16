@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
   
-http:any;
-  constructor() {
+//http:any;
+  constructor(public http: HttpClient) {
       
    }
    checkLogin(login:Login):Observable<any>{
