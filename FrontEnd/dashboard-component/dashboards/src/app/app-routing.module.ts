@@ -1,3 +1,4 @@
+import { EmployeePanelComponent } from './employee-panel/employee-panel.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:"userdashboard",component:UserDashboardComponent},
   {path:"employeedashboard",component:EmployeeDashboardComponent},
   {path: "adminpanel", component:AdminPanelComponent},
+  {path: "employeepanel",component:EmployeePanelComponent},
   {path:"**",component:NotfoundComponent}
 ];
 

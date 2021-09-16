@@ -14,18 +14,21 @@ export class EmployeeDashboardComponent implements OnInit {
     user: new FormControl(),
     pass: new FormControl()
 
-  })
-  constructor(public empSer:EmpsignInService, routes:Router) { }
-
+  });
+  constructor(public empSer:EmpsignInService, public router:Router) { }
+  msg?:string
   ngOnInit(): void {
   }
 
   checkUser() {
     let login = this.emplogin.value
-    this.empSer.checkemplogin(login).subscribe(result=>console.log(result),
-    error=>console.log(error))
-    this.emplogin.reset()
+    this.empSer.checkemplogin(login).subscribe(result=>{
+      
+      if (result== "Success") {
+      this.router.navigate(["employeepanel"])
+    }else {this.msg =result;}
+    
+     this.emplogin.reset()
   }
+    )}
 }
-
-
