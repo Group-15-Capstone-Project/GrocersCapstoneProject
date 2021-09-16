@@ -14,11 +14,7 @@ import { ProductsComponent } from './products/products.component';
   declarations: [
     AppComponent,
     LoginComponent,
-<<<<<<< HEAD
     ProductsComponent
-=======
-
->>>>>>> fd553bf4ccdf7f74b689317e646377aefd0dbff4
   ],
   imports: [
     BrowserModule,

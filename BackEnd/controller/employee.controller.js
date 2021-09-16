@@ -1,7 +1,9 @@
 let employeeModel = require("../model/employee.model");
 
 let signUp = async (request,response)=> {
+    console.log("Got here");
     let employee = request.body;    // receive the data from post method
+    console.log(employee);
     let employeeInfo = await employeeModel.findOne({employeeID:employee.employeeID});
     if(employeeInfo==null){
         let result = await employeeModel.insertMany(employee);

@@ -24,7 +24,9 @@ employee -->
             <h5>Create Employee</h5>
             <form [formGroup]="loginRef1" (ngSubmit)="createEmployee()" class="form-group">
                 <label>Employee Email-ID</label>
-                <input type="text" formControlName="user" class="form-control"/><br/>
+                <input type="text" formControlName="employeeID" class="form-control"/><br/>
+                <label>Employee Temp Pass</label>
+                <input type="text" formControlName="employeePassword" class="form-control"/><br/>
                 <input type="submit" value="Create" class="btn btn-success"/>
                 <input type="reset" value="reset" class="btn btn-info"/>
             </form>
