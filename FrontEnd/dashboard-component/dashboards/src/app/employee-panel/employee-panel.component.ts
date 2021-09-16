@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CheckboxControlValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'app-employee-panel',
@@ -13,3 +14,4 @@ export class EmployeePanelComponent implements OnInit {
   }
 
 }
+

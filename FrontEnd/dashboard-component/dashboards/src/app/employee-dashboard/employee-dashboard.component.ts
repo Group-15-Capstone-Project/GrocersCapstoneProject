@@ -1,4 +1,7 @@
+import { Router } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { EmpsignInService } from '../empsign-in.service';
 
 @Component({
   selector: 'app-employee-dashboard',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeDashboardComponent implements OnInit {
 
-  constructor() { }
+  emplogin = new FormGroup({
+    user: new FormControl(),
+    pass: new FormControl()
+
+  })
+  constructor(public empSer:EmpsignInService, routes:Router) { }
 
   ngOnInit(): void {
   }
 
+  checkUser() {
+    let login = this.emplogin.value
+    this.empSer.checkemplogin(login).subscribe(result=>console.log(result),
+    error=>console.log(error))
+    this.emplogin.reset()
+  }
 }
+
+

@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -12,6 +13,7 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
 import { EmployeePanelComponent } from './employee-panel/employee-panel.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,12 +23,14 @@ import { EmployeePanelComponent } from './employee-panel/employee-panel.componen
     NotfoundComponent,
     AdminPanelComponent,
     UserPanelComponent,
-    EmployeePanelComponent
+    EmployeePanelComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

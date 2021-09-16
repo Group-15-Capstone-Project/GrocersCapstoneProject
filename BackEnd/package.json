@@ -4,11 +4,11 @@
   "description": "Group Members:\r Jonah Valdez Participant 2\r Kairavi Rana Participant 4\r Johnathon Ramirez - Participant 5\r Lipi Soni - Participant 3\r Munjaap Uppal - Participant 1\r --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\r Step1: create file structure and skeleton code for program",
   "main": "index.js",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongodb": "^4.1.2",
     "mongoose": "^6.0.5"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

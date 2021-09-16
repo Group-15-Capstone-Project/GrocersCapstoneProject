@@ -3,6 +3,7 @@ let express = require("express");
 let bodyParser = require("body-parser");
 let mongoose = require('mongoose');
 let cors = require("cors");
+let routerEmployee = require("./router/employee.router")
 //const bodyParser = require("body-parser");
 let app = express();
 app.use(cors());
@@ -14,7 +15,16 @@ mongoose.connect(mongoDB, {useNewUrlParser:true,useUnifiedTopology:true}).then((
     console.log("Connected");
 }).catch(err => console.log(err))
 
+//middleware
+// let app = express();
+// app.use(cors());
+// app.use(bodyParser.json());
+
+//request router file
+app.use("/api/employee",routerEmployee)
 
 
- let adminModel = mongoose.model("Admin", admin)
-app.get()
+
+//  let adminModel = mongoose.model("Admin", admin)
+// app.get()
+app.listen(9090,()=>console.log("Server running on port number 9090"))
