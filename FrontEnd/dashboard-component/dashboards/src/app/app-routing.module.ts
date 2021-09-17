@@ -6,6 +6,9 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { UserPanelComponent } from './user-panel/user-panel.component';
+import { UserSigninComponent } from './user-signin/user-signin.component';
+import { UserSignupComponent } from './user-signup/user-signup.component';
 
 
 //default for is http://localhost:4200/
@@ -15,7 +18,10 @@ const routes: Routes = [
   {path:"employeedashboard",component:EmployeeDashboardComponent},
   {path: "adminpanel", component:AdminPanelComponent},
   {path: "employeepanel",component:EmployeePanelComponent},
-  {path:"**",component:NotfoundComponent}
+  {path: "userpanel",component:UserPanelComponent},
+  {path:"**",component:NotfoundComponent},
+  {path: "user-sign-up",component:UserSignupComponent},
+  {path: "user-sign-in",component:UserSigninComponent}
 ];
 
 @NgModule({
