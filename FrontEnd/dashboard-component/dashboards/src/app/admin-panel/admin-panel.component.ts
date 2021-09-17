@@ -37,9 +37,7 @@ export class AdminPanelComponent implements OnInit {
   ngOnInit(): void {
   }
   createEmployee(){
-    console.log("function hit");
     let login = this.loginRef1.value;
-    console.log("Login vals = " + login);
     this.empSer.logincreateEmployee(login).subscribe(result=>this.msg=result,error=>console.log(error));
     this.loginRef1.reset();
     

@@ -17,11 +17,16 @@ const routes: Routes = [
   {path:"userdashboard",component:UserDashboardComponent},
   {path:"employeedashboard",component:EmployeeDashboardComponent},
   {path: "adminpanel", component:AdminPanelComponent},
+<<<<<<< HEAD
   {path: "employeepanel",component:EmployeePanelComponent},
   {path: "userpanel",component:UserPanelComponent},
   {path:"**",component:NotfoundComponent},
   {path: "user-sign-up",component:UserSignupComponent},
   {path: "user-sign-in",component:UserSigninComponent}
+=======
+  {path: "employeePanel", component:EmployeePanelComponent},
+  {path:"**",component:NotfoundComponent}
+>>>>>>> bbcbe048256243d4fcf11572413ac6788ef9b264
 ];
 
 @NgModule({
