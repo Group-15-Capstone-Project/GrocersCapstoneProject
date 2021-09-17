@@ -1,5 +1,5 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { CheckboxControlValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'app-employee-panel',
@@ -8,10 +8,13 @@ import { CheckboxControlValueAccessor } from '@angular/forms';
 })
 export class EmployeePanelComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router:Router) { }
 
   ngOnInit(): void {
   }
 
-}
+    logout(){
+      this.router.navigate(["employeedashboard"])
 
+    }
+}

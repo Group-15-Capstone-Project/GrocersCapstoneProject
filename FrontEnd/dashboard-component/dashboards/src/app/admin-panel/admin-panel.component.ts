@@ -1,5 +1,7 @@
+import { Router } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { EmpsignInService } from '../empsign-in.service';
 
 @Component({
   selector: 'app-admin-panel',
@@ -8,7 +10,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class AdminPanelComponent implements OnInit {
     loginRef1 = new FormGroup({
-    user:new FormControl(),
+    employeeID:new FormControl(),
+    employeePassword:new FormControl()
   });
   loginRef2 = new FormGroup({
     usertodelete:new FormControl(),
@@ -26,19 +29,18 @@ export class AdminPanelComponent implements OnInit {
     productPrice:new FormControl(),
     productQuantity:new FormControl(),
   });
-  constructor() { 
-    
-  }
+  constructor(public empSer:EmpsignInService, routes:Router) {
+   }
+   msg?: string;
   
 
   ngOnInit(): void {
   }
   createEmployee(){
     let login = this.loginRef1.value;
-    let user = login.user;
-    let pass = "welcome123"; 
-    console.log(user);
-    console.log(pass); 
+    this.empSer.logincreateEmployee(login).subscribe(result=>this.msg=result,error=>console.log(error));
+    this.loginRef1.reset();
+    
 
 
 

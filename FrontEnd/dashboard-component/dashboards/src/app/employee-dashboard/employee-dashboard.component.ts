@@ -11,21 +11,24 @@ import { EmpsignInService } from '../empsign-in.service';
 export class EmployeeDashboardComponent implements OnInit {
 
   emplogin = new FormGroup({
-    user: new FormControl(),
-    pass: new FormControl()
+    employeeID: new FormControl(),
+    employeePassword: new FormControl()
 
-  })
-  constructor(public empSer:EmpsignInService, routes:Router) { }
-
+  });
+  constructor(public empSer:EmpsignInService, public routes:Router) { }
+  msg?:string
   ngOnInit(): void {
   }
 
   checkUser() {
     let login = this.emplogin.value
-    this.empSer.checkemplogin(login).subscribe(result=>console.log(result),
-    error=>console.log(error))
-    this.emplogin.reset()
+    this.empSer.checkemplogin(login).subscribe(result=>{
+      
+      if (result== "Success") {
+      this.routes.navigate(["employeePanel"])
+    }else {this.msg =result;}
+    
+     this.emplogin.reset()
   }
+    )}
 }
-
-
