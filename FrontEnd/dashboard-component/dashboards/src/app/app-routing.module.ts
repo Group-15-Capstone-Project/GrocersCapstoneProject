@@ -1,3 +1,4 @@
+import { EmployeePanelComponent } from './employee-panel/employee-panel.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
@@ -5,7 +6,6 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
-import { EmployeePanelComponent } from './employee-panel/employee-panel.component';
 
 
 //default for is http://localhost:4200/
