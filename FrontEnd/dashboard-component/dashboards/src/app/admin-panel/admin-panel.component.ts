@@ -54,7 +54,7 @@ export class AdminPanelComponent implements OnInit {
 
 
   }
-  addProduct()
+  addProduct()       //  app.get(/addProduct)
   {
     let product = this.loginRef3.value;
     let productprice = Number(product.productPrice);
@@ -85,6 +85,10 @@ export class AdminPanelComponent implements OnInit {
     console.log("product name-" +productname);
     console.log("product price-" +productprice);
     console.log("product quantity-" +productquantity);
+
+     
+    /* let productprice = Number(this.productPrice.value);
+    let productname = productName.value */
 
 
   }
