@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:"userdashboard",component:UserDashboardComponent},
   {path:"employeedashboard",component:EmployeeDashboardComponent},
   {path: "adminpanel", component:AdminPanelComponent},
-  {path: "employeepanel",component:EmployeePanelComponent},
+  {path: "employeePanel", component:EmployeePanelComponent},
   {path:"**",component:NotfoundComponent}
 ];
 
