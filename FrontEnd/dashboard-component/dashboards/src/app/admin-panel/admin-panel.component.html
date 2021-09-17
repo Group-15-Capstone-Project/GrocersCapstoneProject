@@ -50,12 +50,14 @@ employee -->
             <h5>Add Product</h5>
             <form [formGroup]="loginRef3" (ngSubmit)="addProduct()" class="form-group">
                 <label>Product Name</label>
-                <input type="text" formControlName="productName" class="form-control"/><br/>
+                <input type="text" formControlName="productName" id = "pname" class="form-control"/><br/>
                 <label>Product Price</label>
-                <input type="text" formControlName="productPrice" class="form-control"/><br/>
+                <input type="text" formControlName="productPrice" id = "price" class="form-control"/><br/>
                 <label>Product Quantity</label>
-                <input type="text" formControlName="productQuantity" class="form-control"/><br/>
-                <input type="submit" value="Add" class="btn btn-success"/>
+                <input type="text" formControlName="productQuantity" id = "qty" class="form-control"/><br/>
+                <label>Add Image: </label>
+                <input type="url" id="image"><br>
+                <input type="submit" value="Add Product" class="btn btn-success"/>
                 <input type="reset" value="reset" class="btn btn-info"/>
             </form>
             <br/>
