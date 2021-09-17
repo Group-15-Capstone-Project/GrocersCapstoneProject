@@ -11,7 +11,9 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
 import { EmployeePanelComponent } from './employee-panel/employee-panel.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserSignupComponent } from './user-signup/user-signup.component';
+import { UserSigninComponent } from './user-signin/user-signin.component';
 
 
 @NgModule({
@@ -24,13 +26,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AdminPanelComponent,
     UserPanelComponent,
     EmployeePanelComponent,
+    UserSignupComponent,
+    UserSigninComponent
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
