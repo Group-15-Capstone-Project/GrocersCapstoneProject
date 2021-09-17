@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-
 import { Router } from '@angular/router';
 import { SignInService } from '../sign-in.service';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-user-signin',
   templateUrl: './user-signin.component.html',

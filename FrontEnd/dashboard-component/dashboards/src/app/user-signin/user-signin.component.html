@@ -4,7 +4,7 @@
       <h2 class="centerText">User Login</h2>
       <br>
       <br>
-  <form [class=formGroup] = "loginRef" (ngSubmit)= "checkUser()"class="form-group">
+  <form [formGroup]="loginRef" (ngSubmit)= "checkUser()" class="form-group">
       <div class="row mb-3">
         <label class="col-sm-4 col-form-label">User Id:</label>
         <div class="col-sm-8">
@@ -22,7 +22,7 @@
     </form>
     <br/>
 
-    <a routerLink="'/user-sign-up'">Sign Up</a>
+    <a routerLink="'/user-sign-in'">Sign in</a>
  
     <!-- <button class="btn btn-lg user" [routerLink]="['/user-sign-up']">Sign Up</button><br/> -->
 <!-- print msg  -->
