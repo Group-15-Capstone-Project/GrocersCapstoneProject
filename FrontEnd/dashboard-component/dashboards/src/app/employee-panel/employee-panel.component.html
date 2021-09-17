@@ -8,6 +8,19 @@
 </head>
 <body>
     <h2>Welcome Grocer Employee</h2>
+
+    <form [formGroup]="requestRef" (ngSubmit)="sendrequest()">
+        <label>Request Product</label>
+        <input type="text" formControlName="emprequest"/><br/>
+        <input type="submit" value="Send"/>
+        <input type="reset" value="reset"/>
+    </form>
+
+
+
+
+
+
     <input type="button" value="Logout" (click)="logout()"/>
 </body>
 </html>
