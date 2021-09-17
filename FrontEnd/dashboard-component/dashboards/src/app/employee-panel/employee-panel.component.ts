@@ -1,5 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { EmprequestService } from '../emprequest.service';
 
 @Component({
   selector: 'app-employee-panel',
@@ -8,11 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeePanelComponent implements OnInit {
 
-  constructor(public router:Router) { }
+  requestRef = new FormGroup({
+    emprequest: new FormControl()
+
+  })
+  
+  
+
+  constructor(public productreqSer:EmprequestService, public router:Router) { }
 
   ngOnInit(): void {
   }
 
+  sendrequest() {
+
+    // let productRequest = this.requestRef.value;
+    // this.productreqSer.adminRequest(productRequest).
+
+
+  }
     logout(){
       this.router.navigate(["employeedashboard"])
 

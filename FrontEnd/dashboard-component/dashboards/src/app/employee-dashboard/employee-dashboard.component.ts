@@ -23,7 +23,7 @@ export class EmployeeDashboardComponent implements OnInit {
   checkUser() {
     let login = this.emplogin.value
     this.empSer.checkemplogin(login).subscribe(result=>{
-      
+      console.log(login)
       if (result== "Success") {
       this.router.navigate(["employeepanel"])
     }else {this.msg =result;}
