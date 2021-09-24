@@ -12,11 +12,11 @@
 <body>
 
 
-
-
-<div id="main">
+  
+  <!--<form [formGroup]="viewRef" (ngSubmit)="selectItem()" class="form-group">-->
+  <!---  <div id="main">-->
     <h5>View Items</h5>
-    <form [formGroup]="viewRef" (ngSubmit)="viewItems()" class="form-group">
+    
     <div class="card-deck">
         <div class="card">
             <img class="card-img-top" src="" alt="Picture goes here">
@@ -25,7 +25,7 @@
                 <p class="card-text">This is a wider card with supporting </p>
                 <p class="card-text"><small class="text-white">Last updated 3 mins ago</small></p>
             </div>
-            <input type="submit" value="Select Item" onclick=" selectItem()">
+            <input type="submit" value="Select Item" >
         </div>
 
         <div class="card">
@@ -37,7 +37,7 @@
                 </p>
                 <p class="card-text"><small class="text-white">Last updated 3 mins ago</small></p>
             </div>
-            <input type="submit" value="Select Item" onclick=" selectItem()">
+            <input type="submit" value="Select Item" >
         </div>
 
         <div class="card">
@@ -47,11 +47,11 @@
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal</p>
                 <p class="card-text"><small class="text-white">Last updated 3 mins ago</small></p>
             </div>
-            <input type="submit" value="Select Item" onclick=" selectItem()">
+            <input type="submit" value="Select Item" >
         </div>
     </div>
-    </form>
-</div>
+<!--</form>-->
+
 <div class="d-grid gap-3 col-6 mx-auto center">
     <a routerLink="usersignup">Sign Up</a>
     <a routerLink="usersignin">Sign In</a>
