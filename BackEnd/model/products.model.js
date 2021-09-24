@@ -1,12 +1,13 @@
 // load the module 
+const { Double } = require("bson");
 let mongoose = require("mongoose")
 
 mongoose.pluralize(null);       // to avoid creating in lower case with s postfix. 
 // create the schema 
 let productSchema = mongoose.Schema({
     _id : Number,
-    pname : String,
-    price : Number,
+    name : String,
+    price : Double,
     quantity: Number,
 });
 
